@@ -23,6 +23,18 @@ docker build -t herokv .
 http://localhost:8080/set/key/valueX
 http://localhost:8080/set/key2/valueX
 ```
+- set [json data]
+```
+curl --request POST \
+  --url http://localhost:8080/set/kopet \
+  --header 'content-type: application/json' \
+  --data '{
+	"nowplaying": {
+        "title": "Joker (2019)",
+        "year": 2019
+    }
+}'
+```
 
 - get
 ```
